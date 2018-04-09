@@ -1,52 +1,31 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title></title>
-
-	<meta charset="utf-8">
+	<meta charset="UTF-8">
+	<meta content="width=device-width, initial-scale=1, user-scaleable=no">
+	<title>Join chat</title>
 </head>
 <body>
-	
-
-	<ol id="messages"></ol>
-
-	<form id="message-form">
-		<input name="message" type="text" placeholder="Message" autofocus autocomplete="off">
-		<button>Send</button>
+	<form action="/chat.html">
+		<div>
+			<h3>Join a Chat</h3>
+		</div>
+		<div>
+			<label for="uname">
+				Display name
+			</label>
+			<input type="text" name="name" id="uname">
+		</div>
+		<div>
+			<label for="rname">
+				Room name
+			</label>
+			<input type="text" name="room" id="rname">
+		</div>
+		<div>
+			<button>Join</button>
+		</div>
 	</form>
-	<button id="send-location">Send location</button>
-
-	<script type="text/template" id="message__template">
-		<li class="message">
-			<div class="message__title">
-				<h4>{{from}}</h4>
-				<span>{{createdAt}}</span>
-			</div>
-			<div class="message__body">
-				<p>{{text}}</p>
-			</div>
-		</li>
-	</script>
-
-
-	<script type="text/template" id="location__message__template">
-		<li class="message">
-			<div class="message__title">
-				<h4>{{from}}</h4>
-				<span>{{createdAt}}</span>
-			</div>
-			<div class="message__body">
-				<p>
-					<a href="{{url}}" target="_blank">My current location</a>
-				</p>
-			</div>	
-		</li>
-	</script>
-
-	<script src="/socket.io/socket.io.js"></script>
-	<script src="/js/libs/jquery-3.3.1.min.js"></script>
-	<script src="/js/libs/moment.js"></script>
-	<script src="/js/libs/mustache.js"></script>
-	<script src="/js/index.js"></script>
+	
 </body>
 </html>

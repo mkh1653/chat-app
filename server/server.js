@@ -66,6 +66,6 @@ io.on('connection', (socket) =>{
 
 
 
-server.listen(port ,() =>{
+server.listen(app.get('port') ,() =>{
 	console.log(`Server is up on port ${port}`);
 });
